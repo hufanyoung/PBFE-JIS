@@ -12,7 +12,7 @@ from scipy.stats import lognorm
 import pbfe_numerical_example as pbfe
 
 
-class CorrectedNumericalExampleTests(unittest.TestCase):
+class NumericalExampleTests(unittest.TestCase):
     def test_lognormal_conversion_recovers_arithmetic_moments(self) -> None:
         means = np.array([0.25, 0.75, 1.0, 1.8])
         for cov in (0.2, 0.5):
