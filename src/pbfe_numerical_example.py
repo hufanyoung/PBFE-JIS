@@ -289,7 +289,7 @@ def write_summary(results: Dict[str, np.ndarray], output_path: Path) -> None:
         for threshold in SELECTED_LOSS_THRESHOLDS
     }
     summary = {
-        "status": "synthetic reduced-form implementation-quality-control output",
+        "status": "synthetic reduced-form numerical illustration",
         "chain": "IM -> PRP(LAI) -> Q proxy(TFP) -> DV(normalized loss)",
         "damage_state_implemented": False,
         "assumptions": {
