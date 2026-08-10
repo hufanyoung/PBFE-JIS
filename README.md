@@ -1,16 +1,12 @@
 # Performance-Based Food Engineering (PBFE)
 
-This repository contains the reproducible code for the reduced-form numerical
-illustration accompanying a manuscript on **Performance-Based Food Engineering
-(PBFE)**.
+This repository contains the reproducible code for the reduced-form numerical illustration accompanying a manuscript on **Performance-Based Food Engineering (PBFE)**.
 
-PBFE is formulated as a probabilistic framework for risk-informed assessment
-of agricultural production infrastructure. The complete conceptual chain is
+PBFE is formulated as a probabilistic framework for risk-informed assessment of agricultural production infrastructure. The complete conceptual chain is
 
 `IM -> PRP -> DM/DS -> Q -> DV`
 
-with observation/state-estimation, strategy, context, and exposure history
-represented separately where relevant.
+with observation/state-estimation, strategy, context, and exposure history represented separately where relevant.
 
 ## What this repository contains
 
@@ -54,8 +50,7 @@ PBFE-JIS/
 
 ## Reproduce the numerical illustration
 
-The reference environment used Python 3.9 with the dependency versions recorded
-in `requirements.txt` and `environment.yml`.
+The reference environment used Python 3.9 with the dependency versions recorded in `requirements.txt` and `environment.yml`.
 
 ### Conda
 
@@ -76,8 +71,7 @@ python src/pbfe_numerical_example.py
 python -m unittest -v tests/test_pbfe_numerical_example.py
 ```
 
-Running the script regenerates the four PNG files in `figures/` and writes
-machine-readable diagnostics to `outputs/revised_summary.json`.
+Running the script regenerates the four PNG files in `figures/` and writes machine-readable diagnostics to `outputs/numerical_summary.json`.
 
 The calculation is deterministic; it does not use Monte Carlo sampling.
 
@@ -85,8 +79,7 @@ The calculation is deterministic; it does not use Monte Carlo sampling.
 
 The test suite checks:
 
-1. recovery of the specified arithmetic mean and COV from the lognormal
-   parameterization;
+1. recovery of the specified arithmetic mean and COV from the lognormal parameterization;
 2. normalization of finite-domain LAI and TFP probability masses;
 3. positivity of downstream loss means;
 4. boundedness and monotonicity of the final exceedance curve; and
@@ -94,20 +87,15 @@ The test suite checks:
 
 ## Figures
 
-The checked-in figures are the manuscript-facing outputs of the deterministic
-script. They can be regenerated from `src/pbfe_numerical_example.py`.
+The checked-in figures are the manuscript-facing outputs of the deterministic script. They can be regenerated from `src/pbfe_numerical_example.py`.
 
 ## Data availability
 
-No empirical agricultural data are required to reproduce this repository.
-All numerical inputs are synthetic and are stated in the source code and
-`docs/model_scope.md`.
+No empirical agricultural data are required to reproduce this repository. All numerical inputs are synthetic and are stated in the source code and `docs/model_scope.md`.
 
 ## Citation
 
-Please cite the associated PBFE manuscript once its final bibliographic
-information is available. Repository citation metadata are provided in
-`CITATION.cff`.
+Please cite the associated PBFE manuscript once its final bibliographic information is available. Repository citation metadata are provided in `CITATION.cff`.
 
 ## License
 
