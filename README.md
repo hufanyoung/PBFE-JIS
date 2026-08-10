@@ -47,7 +47,7 @@ PBFE/
 │   ├── illustrative_loss_distributions.png
 │   └── synthetic_loss_exceedance.png
 ├── outputs/
-│   └── revised_summary.json
+│   └── numerical_summary.json
 └── docs/
     └── model_scope.md
 ```
