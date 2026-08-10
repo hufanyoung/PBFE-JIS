@@ -31,7 +31,7 @@ It demonstrates conditional probability propagation. It does **not** contain:
 ## Repository structure
 
 ```text
-PBFE/
+PBFE-JIS/
 ├── README.md
 ├── CITATION.cff
 ├── requirements.txt
@@ -54,7 +54,7 @@ PBFE/
 
 ## Reproduce the numerical illustration
 
-The audited environment used Python 3.9 with the dependency versions recorded
+The reference environment used Python 3.9 with the dependency versions recorded
 in `requirements.txt` and `environment.yml`.
 
 ### Conda
@@ -111,9 +111,7 @@ information is available. Repository citation metadata are provided in
 
 ## License
 
-A software license should be selected before public release. Confirm the
-appropriate license with the authors/institutional requirements before adding
-a `LICENSE` file.
+No software license has yet been assigned to this repository.
 
 ## Contact
 
