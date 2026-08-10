@@ -157,7 +157,7 @@ def loss_arithmetic_mean(tfp: np.ndarray | float) -> np.ndarray:
 
 
 def calculate_reduced_example() -> Dict[str, np.ndarray]:
-    """Assemble the corrected reduced-form conditional probability chain."""
+    """Assemble the reduced-form conditional probability chain."""
 
     if not np.isclose(DROUGHT_PROBABILITIES.sum(), 1.0):
         raise AssertionError("Drought-category probabilities must sum to one.")
@@ -347,7 +347,7 @@ def write_summary(results: Dict[str, np.ndarray], output_path: Path) -> None:
 
 
 def plot_figures(results: Dict[str, np.ndarray], output_directory: Path) -> None:
-    """Generate the four corrected manuscript-facing numerical figures."""
+    """Generate the four manuscript-facing numerical figures."""
 
     output_directory.mkdir(parents=True, exist_ok=True)
     sns.set_theme(style="darkgrid", font_scale=1.0)
