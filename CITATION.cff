@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated PBFE manuscript and this repository."
+title: "Performance-Based Food Engineering (PBFE): Reduced-Form Numerical Illustration"
+type: software
+authors:
+  - family-names: Hu
+    given-names: Fan
+    orcid: "https://orcid.org/0000-0002-5336-0670"
+  - family-names: Mosalam
+    given-names: Khalid M.
+    orcid: "https://orcid.org/0000-0003-2988-2361"
+version: 1.0.0
+date-released: 2026-08-09
