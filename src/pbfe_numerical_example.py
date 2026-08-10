@@ -453,7 +453,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--summary-path",
         type=Path,
-        default=repository_directory / "outputs" / "revised_summary.json",
+        default=repository_directory / "outputs" / "numerical_summary.json",
         help="Path for numerical diagnostics and selected outputs.",
     )
     return parser.parse_args()
