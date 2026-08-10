@@ -1,5 +1,5 @@
 {
-  "status": "synthetic reduced-form implementation-quality-control output",
+  "status": "synthetic reduced-form numerical illustration",
   "chain": "IM -> PRP(LAI) -> Q proxy(TFP) -> DV(normalized loss)",
   "damage_state_implemented": false,
   "assumptions": {
