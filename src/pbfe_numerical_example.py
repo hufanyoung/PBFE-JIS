@@ -464,7 +464,7 @@ def main() -> None:
     results = calculate_reduced_example()
     plot_figures(results, arguments.output_dir)
     write_summary(results, arguments.summary_path)
-    print(f"Generated corrected figures in: {arguments.output_dir.resolve()}")
+    print(f"Generated figures in: {arguments.output_dir.resolve()}")
     print(f"Wrote numerical summary: {arguments.summary_path.resolve()}")
     print(
         "Median-exceedance threshold: "
