@@ -1,0 +1,69 @@
+{
+  "status": "synthetic reduced-form implementation-quality-control output",
+  "chain": "IM -> PRP(LAI) -> Q proxy(TFP) -> DV(normalized loss)",
+  "damage_state_implemented": false,
+  "assumptions": {
+    "drought_labels": [
+      "D0",
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "drought_probabilities": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "lai_arithmetic_means": [
+      1.8,
+      1.6,
+      1.4,
+      1.2,
+      1.0
+    ],
+    "lai_arithmetic_cov": 0.5,
+    "lai_conditioning_domain": [
+      0.0,
+      6.0
+    ],
+    "tfp_mean_relationship": "0.2 + LAI / 6",
+    "tfp_arithmetic_cov": 0.2,
+    "tfp_conditioning_domain": [
+      0.0,
+      1.8
+    ],
+    "loss_mean_relationship": "1 - TFP / 2",
+    "loss_arithmetic_cov": 0.2,
+    "finite_domain_conditioning_note": "Nominal means and COVs parameterize underlying untruncated lognormals; LAI and TFP propagation masses are then conditioned on their declared finite domains."
+  },
+  "diagnostics": {
+    "lai_normalized_mass_max_abs_error": 0.0,
+    "tfp_normalized_mass_max_abs_error": 3.3306690738754696e-16,
+    "lai_unconditioned_domain_probability": [
+      0.9973229891989249,
+      0.9987943815171665,
+      0.999544955859095,
+      0.9998654009661894,
+      0.9999720202395294
+    ],
+    "tfp_unconditioned_domain_probability_min": 0.9843566189306375,
+    "tfp_unconditioned_domain_probability_max": 1.0,
+    "minimum_conditional_loss_mean": 0.10125000000000006,
+    "maximum_conditional_loss_mean": 0.99875,
+    "loss_exceedance_monotone": true,
+    "loss_exceedance_min": 1.8584788046558382e-06,
+    "loss_exceedance_max": 0.9999999999999999
+  },
+  "selected_loss_exceedance": {
+    "0.25": 0.9996064481999738,
+    "0.50": 0.9562243797118047,
+    "0.75": 0.5070744034209305,
+    "1.00": 0.09591450211754649,
+    "1.25": 0.009122989187804431,
+    "1.50": 0.0006097875185238392
+  },
+  "median_exceedance_threshold": 0.7529715068354479
+}
