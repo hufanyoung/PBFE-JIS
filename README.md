@@ -1,6 +1,6 @@
 # Performance-Based Food Engineering (PBFE)
 
-This repository contains the reproducible code for the reduced-form numerical illustration accompanying a manuscript on **Performance-Based Food Engineering (PBFE)**.
+This repository contains reproducible code and numerical outputs for the reduced-form numerical illustration accompanying a manuscript on **Performance-Based Food Engineering (PBFE)**.
 
 PBFE is formulated as a probabilistic framework for risk-informed assessment of agricultural production infrastructure. The complete conceptual chain is
 
@@ -10,19 +10,30 @@ with observation/state-estimation, strategy, context, and exposure history repre
 
 ## What this repository contains
 
-The code here implements only the reduced synthetic demonstration
+The numerical code implements the reduced synthetic demonstration
 
 `IM -> PRP (LAI) -> Q proxy (TFP) -> DV (normalized loss)`.
 
-It demonstrates conditional probability propagation. It does **not** contain:
+The baseline calculation demonstrates direct conditional-probability propagation. Version 1.1.0 additionally provides:
+
+- continuous Monte Carlo verification of the corresponding conditional hierarchy;
+- a first-order reliability method (FORM) approximation at the illustrative `DV = 1` limit;
+- local design-point directional-cosine diagnostics;
+- six one-dimensional synthetic parameter-to-target scenarios; and
+- the manuscript-facing target-oriented figure and machine-readable numerical outputs.
+
+The implementation does **not** contain:
 
 - empirical agricultural datasets;
 - a calibrated agricultural damage model;
 - an empirically estimated crop-yield model;
-- an empirical financial-loss model;
+- an empirical financial-loss or benefit-cost model;
 - an annual hazard-occurrence model;
+- calibrated intervention effects;
 - a validated strategy ranking; or
 - an end-to-end PBFE implementation.
+
+All numerical relationships and parameter scenarios are synthetic and are intended only to demonstrate probabilistic propagation, verification, local sensitivity, and target-oriented assessment.
 
 ## Repository structure
 
@@ -34,16 +45,21 @@ PBFE-JIS/
 ├── environment.yml
 ├── .gitignore
 ├── src/
-│   └── pbfe_numerical_example.py
+│   ├── pbfe_numerical_example.py
+│   ├── pbfe_bilal_numerical_extension.py
+│   └── generate_pbfe_bilal_manuscript_figure.py
 ├── tests/
-│   └── test_pbfe_numerical_example.py
+│   ├── test_pbfe_numerical_example.py
+│   └── test_pbfe_bilal_numerical_extension.py
 ├── figures/
 │   ├── illustrative_lai_distributions.png
 │   ├── illustrative_tfp_distributions.png
 │   ├── illustrative_loss_distributions.png
-│   └── synthetic_loss_exceedance.png
+│   ├── synthetic_loss_exceedance.png
+│   └── pbfe_bilal_target_scenarios.png
 ├── outputs/
-│   └── numerical_summary.json
+│   ├── numerical_summary.json
+│   └── bilal_step4b_outputs/
 └── docs/
     └── model_scope.md
 ```
