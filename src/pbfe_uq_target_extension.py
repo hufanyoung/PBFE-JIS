@@ -3,7 +3,7 @@
 This isolated module implements the verified continuous hierarchy,
 FORM/local directional-cosine diagnostic, Monte Carlo verification, and
 inverse target-oriented synthetic parameter scenarios.  It imports and
-preserves the audited discrete implementation; that discrete propagation
+preserves the verified discrete implementation; that discrete propagation
 remains the authoritative probability calculation.
 
 Nothing in this module is an empirical agricultural validation, a calibrated
