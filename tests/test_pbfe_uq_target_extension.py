@@ -42,7 +42,7 @@ class UQTargetExtensionTests(unittest.TestCase):
                 lognorm.std(s=sigma_ln, loc=0.0, scale=np.exp(mu_ln))
                 / recovered_mean
             )
-            # 1e-12 follows the audited baseline's moment regression tolerance
+            # 1e-12 follows the verified baseline's moment regression tolerance
             # and is orders above roundoff while still excluding parameter errors.
             np.testing.assert_allclose(recovered_mean, means, rtol=1e-12, atol=1e-12)
             np.testing.assert_allclose(recovered_cov, cov, rtol=1e-12, atol=1e-12)
