@@ -433,7 +433,7 @@ def plot_figures(results: Dict[str, np.ndarray], output_directory: Path) -> None
         xlabel="DV (normalized loss)",
         ylabel="Probability of Exceedance",
         xlim=(0.0, LOSS_MAXIMUM_DISPLAY_THRESHOLD),
-        ylim=(0.0, 1.01),
+        ylim=(-0.02, 1.01),
     )
     fig.tight_layout()
     fig.savefig(output_directory / FIGURE_FILENAMES["exceedance"], dpi=150)
